@@ -1,0 +1,28 @@
+<doctype html>
+<html>
+    <head>
+        <title>Test2</title>
+    </head>
+    <body>
+        <h1>JavaScript can validate input</h1>
+        <p>please input a number between 1 to 10: </p>
+        <input id="number"  type="number">
+        <button type="button" onclick="myfunction()">Submit</button>
+        <p id="demo"></p>
+        <script>
+            function myfunction() {
+                var x, text;
+                
+                x = document.getElementById("number").value;
+
+                if (isNaN(x)|| x < 1 || x > 10){
+                    text = "incorrect number, please enter 1 to 10"
+                } else{
+                    text = "input correct"
+                }
+                document.getElementById("demo").innerHTML = text;
+
+            }
+        </script>
+
+</html>
